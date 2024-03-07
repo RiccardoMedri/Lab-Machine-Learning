@@ -1,0 +1,5 @@
+datasets/
+
+*.zip
+*.csv
+*.sqlite
