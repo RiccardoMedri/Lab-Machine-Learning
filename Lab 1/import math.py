@@ -1,8 +1,9 @@
+import numpy as np
+import cv2
 import math
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import ImageGrid 
 
-# Esempio di divisione che arrotonda per eccesso
-numeratore = 5
-denominatore = 4
+colo_img = cv2.imread('./imgs/pig/color.png', cv2.IMREAD_COLOR)    # carico l'immagine colore.
 
-risultato = math.ceil(numeratore / denominatore)
-print(risultato)  # Output: 3
+print(colo_img)
