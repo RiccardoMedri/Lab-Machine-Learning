@@ -1,0 +1,22 @@
+{
+    "io": {
+        "out_folder": "./dst"
+    },
+    "params": {
+        "save_as_npz": false,
+        "separate_by_class" : true
+    },
+    "synth_generator": {
+        "type": "shapes",
+        "total_objects": 500,
+        "test_percentage": 0.30,
+        "validation_percentage": 0.20
+    },
+    "shapes": {
+        "colored": true,
+        "canvas_width": 128,
+        "canvas_height": 128,
+        "min_sides": 2,
+        "max_sides": 4
+    }
+}
