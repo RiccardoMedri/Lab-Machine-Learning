@@ -21,7 +21,7 @@ iris = pd.read_csv('datasets/iris/iris.csv')
 
 X = iris.iloc[:,1:5]
 y = iris['Species']
-names = iris.columns[1:5]
+names = iris.columns[1:5] 
 feature_names = iris.columns[5]
 targets = np.unique(y)
 fig, (ax1, ax2) = plt.subplots(1,2, figsize=(9,6))
@@ -34,6 +34,7 @@ ax2.set_xlabel(names[2]);ax2.set_ylabel(names[3])
 ax1.axis('equal') # only left plot, equal x and y unit lengths
 ax1.legend();ax2.legend()
 plt.show()
+
 
 iris = load_iris()
 X = iris.data
