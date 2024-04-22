@@ -1,0 +1,73 @@
+{
+    "type" : "object",
+    "required" : ["io", "params", "synth_generator", "shapes"],
+    "properties" : {
+        "io" : { 
+            "type" : "object",
+            "required" : ["out_folder"],
+            "properties" : {
+                "out_folder" : {"type" : "string"}
+            }
+        },
+        "params" : {
+            "type" : "object",
+            "required" : ["save_as_npz"],
+            "properties" : {
+                "save_as_npz" : {"type" : "boolean"},
+                "separate_by_class" : {"type": "boolean"}
+            }
+        },
+        "synth_generator" : {
+            "type" : "object",
+            "required" : ["type", "total_objects", "test_percentage", "validation_percentage"],
+            "properties" : {
+                "type" : {
+                    "type" : "string",
+                    "pattern" : "(shapes)"
+                },
+                "total_objects" : {
+                    "type" : "number", 
+                    "minimum" : 0,
+                    "maximum" : 500
+                },
+                "test_percentage" : {
+                    "type" : "number", 
+                    "minimum" : 0,
+                    "maximum" : 1
+                },
+                "validation_percentage" : {
+                    "type" : "number", 
+                    "minimum" : 0,
+                    "maximum" : 1
+                }
+            }
+        },
+        "shapes" : {
+            "type" : "object",
+            "required" : ["colored", "canvas_width", "canvas_height", "min_sides", "max_sides"],
+            "properties" : {
+                "colored" : {"type" : "boolean"},
+                "canvas_width" : {
+                    "type" : "number", 
+                    "minimum" : 32,
+                    "maximum" : 256
+                },
+                "canvas_height" : {
+                    "type" : "number", 
+                    "minimum" : 32,
+                    "maximum" : 256
+                },
+                "min_sides" : {
+                    "type" : "number", 
+                    "minimum" : 2,
+                    "maximum" : 10
+                },
+                "max_sides" : {
+                    "type" : "number", 
+                    "minimum" : 2,
+                    "maximum" : 10
+                }
+            }
+        }
+    }
+}

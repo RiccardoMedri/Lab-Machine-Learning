@@ -1,6 +1,6 @@
 import torch
 
-class Power(torch.nn.module):
+class Power(torch.nn.Module):
 
     def __init__(self):
         super().__init__()

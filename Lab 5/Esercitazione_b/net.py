@@ -5,14 +5,15 @@ class Model(torch.nn.Module):
 
     def __init__ (self) -> None:
         super().__init__()
-        self.layer1 = Power.forward
-        self.layer2 = Sqrt.forward
-        self.layer3 = Offset.forward     
+        self.layer1 = Power()
+        self.layer2 = Sqrt()
+        self.layer3 = Offset(100)
     
     def forward(self, x : torch.Tensor) -> torch.Tensor:
-        x = self.layer1(x)
-        x = self.layer2(x)
-        x = self.layer3(x)
+        result = self.layer1.forward(x)
+        result = self.layer2.forward(result)
+        result = self.layer3.forward(result)
+        return result
     
 if __name__ == '__main__':
     
